@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "vivaxy.vscode-conventional-commits",
+    "editorconfig.editorconfig",
+    "eamodio.gitlens"
+  ]
+}
