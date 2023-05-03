@@ -16,7 +16,8 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "test": "echo \"No tests yet\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
