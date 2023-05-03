@@ -1,34 +1,21 @@
-## Usage
+<div style="text-align: center" align="center">
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+# Nand Zone
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+![NandZone logo](src/assets/favicon.ico)
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+</div>
+A modern Nand2Tetris toolkit.
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+## Contributing
 
-## Available Scripts
+Contributing
+Read the [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
 
-In the project directory, you can run:
+## Roadmap
 
-### `npm dev` or `npm start`
+Future plans and high-priority features and enhancements can be found in our [roadmap](ROADMAP.md).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## License
 
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+This project is licensed under the terms of the [MIT license](LICENSE).
