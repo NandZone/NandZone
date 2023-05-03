@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.8.2",
+    "chevrotain": "^10.5.0",
     "solid-js": "^1.6.10"
   }
 }
