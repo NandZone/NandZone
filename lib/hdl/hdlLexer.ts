@@ -16,19 +16,6 @@ const LeftBrace = createToken({ name: 'LeftBrace', pattern: /{/ });
 const RightBrace = createToken({ name: 'RightBrace', pattern: /}/ });
 const DoubleDot = createToken({ name: 'DoubleDot', pattern: /\.\./ });
 
-const Integer = createToken({
-  name: 'Integer',
-  pattern: /0|[1-9]\d*/,
-});
-const Value = createToken({
-  name: 'Value',
-  pattern: /true|false/,
-});
-const Identifier = createToken({
-  name: 'Identifier',
-  pattern: /[a-zA-Z_][\w]*/,
-});
-
 const WhiteSpace = createToken({
   name: 'WhiteSpace',
   pattern: /\s+/,
@@ -45,7 +32,24 @@ const MultiLineComment = createToken({
   group: Lexer.SKIPPED,
 });
 
+const Value = createToken({
+  name: 'Value',
+  pattern: /true|false/,
+});
+const Identifier = createToken({
+  name: 'Identifier',
+  pattern: /[a-zA-Z_][\w]*/,
+});
+const Integer = createToken({
+  name: 'Integer',
+  pattern: /\d+/,
+});
+
 export const hdlVocabulary = {
+  WhiteSpace,
+  SingleLineComment,
+  MultiLineComment,
+
   Chip,
   In,
   Out,
@@ -61,12 +65,10 @@ export const hdlVocabulary = {
   LeftBrace,
   RightBrace,
   DoubleDot,
-  Integer,
+
   Value,
+  Integer,
   Identifier,
-  WhiteSpace,
-  SingleLineComment,
-  MultiLineComment,
 } as const;
 export const hdlTokensList = Object.values(hdlVocabulary);
 

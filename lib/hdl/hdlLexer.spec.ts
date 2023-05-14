@@ -1,5 +1,7 @@
 import { IToken, TokenType, tokenMatcher } from 'chevrotain';
+import fs from 'fs';
 
+import { getHdlPath, hdlList } from '../mocks/hdlIndex';
 import { hdlLexer, hdlVocabulary } from './hdlLexer';
 
 const matchTokens = (tokens: IToken[], tokenTypes: TokenType[]) => {
@@ -158,5 +160,23 @@ describe('hdl lexer', () => {
       hdlVocabulary.Semicolon,
       hdlVocabulary.RightBrace,
     ]);
+  });
+
+  describe('all the hdl files', () => {
+    for (const name of hdlList) {
+      it(`should tokenize "${name}.hdl" without errors and results should match snapshot`, () => {
+        const text = fs.readFileSync(getHdlPath(name), 'utf8');
+        const tokens = hdlLexer.tokenize(text);
+        expect(tokens.errors).toEqual([]);
+        expect(tokens.groups).toMatchSnapshot();
+        expect(
+          tokens.tokens.map((t: Partial<IToken>) => {
+            delete t.tokenTypeIdx;
+            delete t.tokenType?.tokenTypeIdx;
+            return t;
+          }),
+        ).toMatchSnapshot();
+      });
+    }
   });
 });
