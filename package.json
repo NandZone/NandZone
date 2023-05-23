@@ -12,14 +12,14 @@
   "author": "NandZone Contributors",
   "license": "MIT",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
+    "start": "npm run dev",
+    "dev": "vite --host --port 3000",
     "build": "vite build",
     "serve": "vite preview",
     "prettier": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "test:ui": "vitest watch --ui"
+    "test:ui": "vitest watch --ui --api.host"
   },
   "devDependencies": {
     "@vitest/ui": "^0.30.1",
